@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+<% 20.times do |n| %>
+article_<%= n %>:
+  title: Article <%= n %>
+  text: La la la
+<% end%>

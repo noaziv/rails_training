@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+<p id="alert"><%= flash[:alert] %></p>
+
+<h1>Listing Articles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Text</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%= render partial: @articles, spacer_template: "article_spacer" %>
+    <% @articles.each do |article| %>
+       <%# instead of this, the render shorthand above %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Article', new_article_path %>
+<br/><br/>
+Tests:
+<br/>
+<%= date_select("article", "published_on") %>
+<br/>
+<%= distance_of_time_in_words(Time.now, Time.now + 15.seconds) %>
+<br/>
+<% my_hash = {'first' => 1, 'second' => 'two', 'third' => [1,2,3]} %>
+<%= debug(my_hash) %>
+
+<%= debug(request.url) %>

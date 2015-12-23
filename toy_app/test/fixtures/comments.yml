@@ -1,0 +1,8 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+<% 80.times do |n| %>
+comment_<%= n %>:
+  commenter: Person <%= n % 7 %>
+  body: Comment <%= n %>
+  article: article_<%= n % 20 %>
+<% end%>
